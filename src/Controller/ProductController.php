@@ -12,6 +12,13 @@ class ProductController extends MainController
 {
 
     /**
+     * @Route("/", name="ad")
+     */
+    public function home()
+    {
+        print_r("HIIDSADS"); 
+    }                                                                                                                                                                                                                                                                                                                                                                                                       
+    /**
      * @Route("/state/{st}", name="states")
      * @Functions({"CourseOptions"})
      */
@@ -19,14 +26,14 @@ class ProductController extends MainController
     {
         // print_r($request->getContent());exit;
         $parameters = json_decode($request->getContent(), true);
-        $states     = $this->e->CourseOptions->getCourseByCity($st, $parameters["city"]);
+        $states = $this->e->CourseOptions->getCourseByCity($st, $parameters["city"]);
 
         $presentation = json_encode($states, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-
+ 
         $response = new Response($presentation);
         $response->headers->set('Content-Type', 'application/json');
 
-        return $response;
+        return $response;   
     }
 
     /**
