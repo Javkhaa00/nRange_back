@@ -16,13 +16,21 @@ class ProductController extends MainController
      */
     public function home()
     {
-        print_r("HIIDSADS"); 
-    }                                                                                                                                                                                                                                                                                                                                                                                                       
+        return $this->render("index.html");
+    }        
+
+    // /**
+    //  * @Route("/courses", name="ad")
+    //  */
+    // public function courses()
+    // {
+    //     echo 1;exit;
+    // }                                                                                                                                                                                                                                                                                                                                                                                                  
     /**
      * @Route("/state/{st}", name="states")
      * @Functions({"CourseOptions"})
      */
-    public function listedByState(Request $request, $st)
+    public function listedByState(Request $request, $st) 
     {
         // print_r($request->getContent());exit;
         $parameters = json_decode($request->getContent(), true);
