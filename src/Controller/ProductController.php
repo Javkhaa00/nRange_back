@@ -18,14 +18,7 @@ class ProductController extends MainController
     {
         return $this->render("index.html");
     }        
-
-    // /**
-    //  * @Route("/courses", name="ad")
-    //  */
-    // public function courses()
-    // {
-    //     echo 1;exit;
-    // }                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                
     /**
      * @Route("/state/{st}", name="states")
      * @Functions({"CourseOptions"})
