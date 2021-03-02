@@ -1,0 +1,13 @@
+/bin
+/config
+/migrations
+/public
+/src
+/templates
+/var
+/vendor
+/.env
+/.gitignore
+/composer.json
+/composer.lock
+/symfony.lock
