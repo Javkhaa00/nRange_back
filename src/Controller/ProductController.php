@@ -17,6 +17,7 @@ class ProductController extends MainController
     public function home()
     {
         return $this->render("index.html");
+        urlencode("FjD#47%5mA");
     }        
                                                                                                                                                                                     
     /**
