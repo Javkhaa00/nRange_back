@@ -66,6 +66,7 @@ class ProductController extends MainController
         $presentation = json_encode($cities, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
         $response = new Response($presentation);
+        //echo $response;exit;
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
